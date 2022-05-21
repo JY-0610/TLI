@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: bold;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+button {border: 0; background: none;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m::after {content: '\00a0';}
+span.icon {font-family : xeicon;}
+
+
+body {font-family:'NotoSans KR', sans-serif; font-size: 17px; color: #ffffff;  background:#000;overflow-x: hidden;}
+#wrapper {position: relative; min-width: 1024px; height: 100vh; }
+#main{position: relative; width: 100%; height: 100%;}
+#main-visual { width: 100%; height: 100%;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 18px; transition: top 0.3s; z-index: 20;}
+#skip-nav:focus {top: 0;}
+/* header */
+#header h1 {position: fixed; height: 35px; left: 70px; top: 70px; z-index: 20; }
+#header h1 img {height: 35px;}
+
+
+/* 메뉴아이콘 */
+ #header .menu {position: absolute; width: 40px;  text-align: center; top: 7%; right: 40%;padding-top: 20px; color: #ffffff; font-size: 14px; transition: all 0.3s;}
+#header .menu span::before {position: absolute; content: ''; top: -10px; right: 0; width: 50%; height: 2px;background: #ffffff; transition: all 0.3s;}
+header .menu span {position: absolute; content: ''; top: 0; left: 6px; width: 100%; height: 2px;background: #ffffff; }
+#header .menu span::after {position: absolute; content: ''; top: 10px; left: 0; width: 50%; height: 2px;background: lavenderblush; transition: all 0.3s;}
+/* button-close */
+#header .close span::before {position: absolute; content: ''; top: 0px; right: 0; width: 100%; height: 2px;transform: rotate(50deg); background: #ffffff;}
+#header .close span {background: rgba(255, 255, 255, 0);}
+#header .close span::after {position: absolute; content: ''; top: 0px; left: 0; width: 100%; height: 2px;transform: rotate(-50deg); background: #ffffff;}
+
+
+/* hover */
+#header .menu:hover span::before {width: 100%; }
+#header .menu:hover span::after {width: 100%; }
+
+
+/* 언어선택 */
+#header .lang {color: #ffffff; position: fixed; right: 0;bottom: 1%; width: 91px; height: 180px; z-index: 40; text-align: center; z-index: 100;}
+#header .lang > ul::before {content: ''; position: absolute; left: 0px; top: 5px; width: 48px; height: 160px; opacity: 0.5; border: 1px solid #ffffff; opacity: 0.3; border-radius: 25px;}
+#header .lang > ul {width: 50px; height: 100%; padding: 10px 0 10px 0px;}
+#header .lang >ul >li > a::after {content: '';position: absolute; width: 45px;height: 45px; border-radius: 50%; left: 0; background: #d61818; z-index: -1; transition: all 0.3s; }
+#header .lang >ul >li+li > a::after {content: ''; opacity: 0;}
+
+/* gnb */
+nav.gnb {position: fixed; top: 0;right: 0; width: 7vw; max-width: 130px; height: 65%; /*top: calc(50% - 328px);*/  z-index: 70; transition: 0.3s; height: 100vh; text-align: center; border-left: 1px solid #ffffff36;}
+
+nav.gnb ul li a span {position: relative; font-size: 16px; line-height: 60px; height: 100%; color:#ffffff98;;display: block; transform: rotate(-90deg);  opacity: 1; transition: all 0,5s 0.2;}
+/* transform: rotate(-90deg); */
+nav.gnb ul li a strong {right: 0%; top: 50%; display: inline-block; width: 200px;  font-size: 48px; transform: translate(0, -100%); opacity: 0; transition: all 0.5s;  line-height: 40px; color: #ffffff;}
+
+
+
+nav.gnb ul li a:hover span { line-height: 60px; width: 100px; transform: translateY(50px);  display: block; transform: rotate(-90deg); opacity: 1; opacity: 0; visibility: hidden;}
+nav.gnb ul li a:hover strong {right: 0%; top: 50%; display: inline-block;width: 200px;  font-size: 48px; transform: translate(-50%, -100%); opacity: 1;}
+
+nav.gnb ul {width: 130px; position: absolute; top: 20%; }
+nav.gnb ul li:nth-child(3)::after {content: ''; width: 16px; height: 1px; position: absolute; left: 50%; color: #ffffff;}
+#header .lang {position: fixed;}
+#header .lang > ul > li+li {margin-top: 10px;}
+#header .lang > ul > li  a {width: 45px; height: 45px; border-radius: 50px; color: #ffffff;font-weight: bold;position: relative; display: inline-block; line-height: 40px; letter-spacing: 0.02em;}
+#header .lang > ul > li  a.on{ background: #d61818; }
+
+/* 첫번째 페이지 */
+.section1 {position: relative; height: 100%;}
+.page-wrap {width: 100%; height: 100%; overflow: hidden;} 
+/* main */
+.move-1 {position: absolute; top: 40%; left: calc(50% - 275px);  z-index: 4;} 
+
+.main-txt{position: relative; left: calc(50% - 344px); bottom: 35%;  }
+.main-txt h2 { position: absolute; font-size: 64px; text-align: center; overflow: hidden; position: relative;  border-bottom: 5px solid #ffffff; }
+.main-txt h2 span { display:  inline-block;  min-width: 15px; }
+.logo-txt {display: inline-block;}
+.logo-txt img {bottom:200px}
+p.sub-txt {left: 50%; text-align: center; font-size: 17px; font-weight: bold; margin-top: 20px;}
+
+
+.sub-txt,button {animation: ani alternate 1.2s;}
+
+
+.main-txt span:nth-child(1) {animation: ani alternate 0.0s;}
+.main-txt span:nth-child(2) {animation: ani alternate 0.2s;}
+.main-txt span:nth-child(3) {animation: ani alternate 0.3s;}
+.main-txt span:nth-child(4) {animation: ani alternate 0.4s;}
+.main-txt span:nth-child(5) {animation: ani alternate 0.5s;}
+.main-txt span:nth-child(6) {animation: ani alternate 0.6s;}
+.main-txt span:nth-child(7) {animation: ani alternate 0.7s;}
+.main-txt span:nth-child(8) {animation: ani alternate 0.8s;}
+.main-txt span:nth-child(9) {animation: ani alternate 0.9s;}
+.logo-txt {animation: ani alternate 1s;}
+
+
+/* 첫번째페이지 click here부분  */
+/* buuton */
+.button {position: absolute; width: 220px;height: 81px; background: url(../image/bg_main_btn.png) no-repeat;background-size: 100% auto; left: calc(50% - 90px); font-size: 16px; padding-left: 20px; text-align: left; color: #ffffff;font-weight: bold; line-height: 1.2;margin-top: 40px;}
+.arrow{position: absolute; top: 20%; left: calc(50% + 50px);  width: 55px;height: 55px; border-radius: 50px; background: #ffffff; transition: all 0.3s;}
+.arrow::before {content: ''; position: absolute;width: 50px;height: 50px;  left :-100%; opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+.arrow:hover::before {content: ''; position: absolute;width: 50px;height: 50px;  left :0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat;}
+.arrow::after {content: ''; position: absolute;width: 50px;height: 50px;  left: 0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+.arrow:hover::after {content: ''; position: absolute;width: 50px;height: 50px;  right: 200%; opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+
+
+
+/* sub gnb */
+ .sub {position: fixed; left: 60%; top: 0; height: 100vh; width: 100%;padding-left: 45px; background: #131313; visibility: hidden; opacity: 0; }
+.sub div.box {padding-top: 100px;}
+.sub div.box > ul > li >a  { font-size: 39px;  line-height: 1.5; font-weight: bold;  }
+.sub div.box > ul > li >ul { margin-top: 5px; z-index: inherit; }
+.sub div.box > ul > li >ul >li {display: inline-block; margin: 15px; font-weight: 400; z-index: 50;}
+
+.sub.on{visibility: visible; opacity: 1; transition: all 0.3s; z-index: 20; }
+/* move-1 */
+.sub div.box > ul > li >ul >li:hover {color: #d61818;}
+
+
+/* bg */
+.bg-effect::before {content:''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../image/main-dim2.png) center center no-repeat; animation: opacity 1s ease-in-out infinite alternate;}
+.bg-effect { background: url(../image/main-dim.png) center center no-repeat; z-index: 1;}
+.bg-effect.on{animation: scale2 alternate ease-in-out 1s;}
+
+ .main-bg { background: url(../image/img_main_sec01.jpg) center center no-repeat; top: 0; left: 0; z-index: 0; background-size: cover;}
+ 
+ .main-bg.on { background: url(../image/img_main_sec01.jpg) center center no-repeat; top: -50px; left: 0; background-size: cover; z-index: 0; animation: scale 2.5s ease-in-out infinite alternate;}
+
+ .bg-effect,.main-bg {position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+
+/* move2 스크롤 */
+ .move-2 {position: absolute; font-size: 110px; z-index: 2; font-weight: bold;  top: calc(50% - 133px); left: calc(50% - 475px); opacity: 0; scale: 0;}
+ .move-2.on {opacity: 1; transform: scale(1); transition: all 0.5s ease 1s; z-index: 2;}
+ .move-2 span {text-align: center; margin-bottom: 3px; border-bottom: 4px  solid #ffffff;}
+ .move-2 span+span {display: block; margin-top: 3px;}
+ .scroll {position: fixed; font-size: 13px;font-weight: bold; bottom: 50px; left: 47%; z-index: 20;}
+ .scroll p {margin-bottom: 10px;}
+
+ .scroll > span { position: absolute; left: 45%; width: 2px; height: 70px; background: #f1f1f171;}
+ .scroll > span::after {content: ''; position: absolute; width: 2px; height: 30px; background: #ffffff; animation: scroll infinite 2s linear;}
+
+
+
+ .sub-btn {position: fixed; left: 5%; width: 120px;height: 120px; top:90%; z-index: 20; }
+ .sub-btn::before {content: ''; position: absolute; width: 100%; height: 100%; left: -50px; top: -50px; background: url(../image/img_text_side.png) no-repeat; background-size: 100%; z-index: 20; animation: rotate 10s linear infinite;}
+ .sub-btn::after {content: '';  position: absolute; left: -22px; top: -24px; border-radius: 50px;  width: 67px; height: 67px; background: #d61818; z-index: 10; }
+.sub-btn img {position: absolute; width: 26px; height: 26px;z-index: 20;}
+
+
+
+/* .sub-btn::after {content: ''; position: absolute; top: 96%;left: 5%; width: 65px;height: 65px; border-radius: 50px; background: #d61818;}  */
+
+
+
+ /* move3 티비부분 */
+ .move-3 div.main-bg2 {position: absolute;width: 100%; height: 100%; background: url(../image/img_main_sec02.png) center center no-repeat; top: 0px; right: 0;  transition: all 0.5s; transform: scale(2);}
+
+
+
+/* 티엘아이를 선택해야 하는이유 */
+/* .section3 {position: relative;} */
+.section3{background-color: #000;}
+.section3 h2 {font-size: 70px; font-weight: bold; line-height: 1; text-align: center; color: #f1f1f1; padding-top: 100px;} 
+.section3 p.title  {font-size: 17px; line-height: 2; text-align: center; margin-top: 8px;}
+.section3 ul {left: 0;}
+/* 이미지 */
+.section3 ul.slide { height: 500px; padding-bottom: 70px; max-width: 1895px; margin: 50px auto 0; perspective: 500px; ;}
+.section3 ul.slide::before {content: ''; width: 100%; height: 100%; display: block;  background: url(../image/bg_slide_line.png) center bottom  no-repeat; background-size: 1394px auto; position: absolute;}
+.section3 > ul.slide > li { position: relative; float: left; width: 600px;  height: 100%; margin-right: 10px;} 
+.slide3d {transform: translate3d(0px, 40px,-325px ) rotate(0deg) rotateY(90deg); z-index: 0;}
+.section3 > ul.slide > li:nth-child(2) {z-index: 3;}
+
+
+/* 텍스트 */
+/*.section3 > ul.txt-slide{ } 
+.section3 > ul.txt-slide >li { float: left; top: calc(50% + 37px);   text-align: center; margin: 40px; background: lightblue;}*/
+
+/*.section3 > ul.txt-slide { transform: translate(5%, 0%); height: 100%;} */
+.section3 > ul.txt-slide {position: absolute; width: 100%; text-align: center; margin: 20px 70px;  } 
+ .section3 > ul.txt-slide li {float: left; width: 30%;  font-size: 21px; font-weight: bold; padding-left: 20px; line-height: 1.5; } 
+.section3 > ul.txt-slide strong {opacity: 0.5;}
+.section3 ul.txt-slide li:nth-child(1) p,
+.section3 ul.txt-slide li:nth-child(3) p {visibility: hidden;} 
+.section3  ul.txt-slide li:nth-child(2) strong.on {font-size: 32px; text-align: center; font-weight: bold; width: 490px; line-height: 1.5; opacity: 1; color: #ffffff; }
+.section3 > ul.txt-slide p { font-weight: normal; font-size: 18px; line-height: 1.5;text-align: center; color: #ffffff; opacity: 0.4; }
+.section3 > ul.txt-slide p.show {display: none; }
+
+
+
+/* 원 */
+.section3 > ul.txt-slide > li:nth-child(1)::before { content: ''; position: absolute; top: -53px;   left: calc(50% - 541px); width: 14px;height: 14px;border-radius: 100px; background: #f1f1f1;}
+
+.section3 > ul.txt-slide > li:nth-child(2):before { content: ''; position: absolute; top: -29px;  left: calc(50% - 50px); width: 14px;height: 14px;border-radius: 100px; background: #d61818;}
+
+.section3 > ul.txt-slide > li:nth-child(2)::after { content: ''; position:absolute; top: -35px; width: 26px;height: 26px; border-radius:100px; background-color: #d61818; animation: point 2s infinite alternate linear; }
+
+.section3 > ul.txt-slide > li:nth-child(3)::before { content: ''; position: absolute; top: -52px;  right: calc(50% - 392px); width: 14px;height: 14px;border-radius: 100px; background: #f1f1f1;}
+
+/* .section3 > ul.txt-slide > li:nth-child(3)::before { content: ''; position: absolute; top:800x ; left: calc(50% + 56px); width: 14px;height: 14px;border-radius: 100px; background: #f1f1f1;} */
+
+
+
+
+/* prev,next버튼 */
+
+.section3 button.prev,
+.section3 button.next {position: absolute; width: 40px; cursor: pointer;}
+.section3 button.prev {left: calc(50% - 200px); margin-top: 100px;}
+.section3 button.next {right: calc(50% - 207px); margin-top: 100px;}
+
+
+.section3 button img.prev-on {position: absolute; top: 0; left: 0; bottom: 0; opacity: 0;}
+.section3 button img.prev-off {position: absolute; top: 0; left: 0; bottom: 0; }
+.section3 button img.prev-on:hover {opacity: 1;}
+
+.section3 button img.next-on {position: absolute; top: 0; right: 0; bottom: 0; opacity: 0; }
+.section3 button img.next-off {position: absolute; top: 0; right: 0; bottom: 0; }
+.section3 button img.next-on:hover {opacity: 1;}
+
+
+
+
+
+/* section4 */
+.section4 { width: 100%; height: 100%;}
+.section4 ul { position: relative; margin-top: 100px; top: 25%; width: 100%; height: 100%; background: url(../image/img_main_sec04.jpg) no-repeat;}
+.section4 ul > li { position: relative; width: 23%; height: 100%; margin-right: 18px; float: left;  overflow: hidden;z-index: 2;}
+.section4 ul li p::after {content: ''; width: 0;height: 3px; position: absolute; background: #ffffff; left: 5%; top: 65px; transition: all 0.3s;}
+.section4 ul li:hover p::after {content: ''; width: 85%;}
+.section4 ul > li span.line {position: absolute;
+    width: 1px; height: 100%; top: 0; left: 0; background:  #f1f1f171; z-index: 1;}
+.section4 ul > li span.line::after { content: '';  position: absolute; width: 1px; height: 10%; top: 0; left: 0; background:  #ffffff;animation: scroll infinite  linear; }
+.section4 ul > li:nth-child(2) span.line::after {content: '';  animation-duration: 2.5s; }
+.section4 ul > li:nth-child(3) span.line::after {content: '';  animation-duration: 2s;}
+.section4 ul > li:nth-child(4) span.line::after {content: '';  animation-duration: 1.7s;}
+.section4 ul > li:nth-child(4) {border: none;}
+.section4 ul > li  a {display: block;}
+.section4 .txt {transform: translate(0, 300px); text-align: center; }
+.section4 .txt p {font-size: 45px; font-weight: bold; padding-bottom: 20px;}
+
+.section4 .txt span {font-size: 15px; margin-top: 20px; transition: all 0.5s; opacity: 0;}
+.section4 ul > li:first-child button {top: 100px;}
+.section4 button {display: block; position: absolute; left: calc(50% - 60px); margin: 40px 0; font-size: 16px; font-weight: bold; line-height: 1.5; border-bottom: underline 2px solid #d61818; text-underline-position:under; color: #ffffff; opacity: 0; }
+.section4 button > span {background: transparent; top: -30px;}
+.section4 ul:hover > div.txt {opacity: 1;}
+
+.section4 .bg1 {position: absolute; width: 100%; height: 100%;left: 0; background: url(../image/img_main_sec04-01.jpg) no-repeat; background-size: cover; transform: translate(-3px, 200px); z-index: 1; opacity: 0;}
+.section4 .bg1.on {position: absolute; width: 100%; height: 100%;left: 0; background: url(../image/img_main_sec04-01.jpg) no-repeat; background-size: cover; transform: translate(-3px, 200px); z-index: 1; opacity: 1;}
+
+
+
+/* section5 */
+.section5 {position: relative; width: 100%; height: 100%; min-width: 950px; z-index: 3; padding: 350px 100px 50px;}
+.section5 .img {width: 60%; perspective-origin: center; perspective: 300px;}
+.section5 .mainImg { transform: rotateY(3deg);}
+.section5 div.txt{position: absolute;  top: 40%; left: 60%;}
+.section5 h2 { font-size: 70px; font-weight: bold; line-height: 1; right: 0;}
+
+.section5 button {position: relative; margin-top: 50px; font-size: 20px; font-weight: bold;color: #ffffff; display: inline-block; border-bottom: 2px solid  #d61818; text-underline-position:under;}
+
+
+
+
+.section5 ul >li {float: left;text-align: center; margin: 60px 5px; width: 90px; height: 90px; padding: 10px; background: #202020; transition: all 0.5s;}
+.section5 ul >li img {width: 40px; height: 40px;  margin-top: 5px; }
+.section5 ul >li span {display: block; margin-top: 20px;}
+.section5 ul >li:hover {border-radius: 50%;  border: 1px solid #d61818; background: #000; box-shadow:  0px 0px 10px 2px rgba(214,24,24,0.5);;}
+
+
+ /* footer */
+
+/* #footer::after {content:''; width: 100%; height: 400px; background: #272727;} */
+#footer {position: relative; width: 100%; height: 500px; background: #272727;}
+#footer div.company{position: absolute; width: 100%;   left: 50px; bottom: 50%;  z-index: 10; padding-bottom: 50px; background: #131313;}
+#footer div.left {float: left; margin-left: 160px; padding: 80px 0;}
+
+#footer div.left img  {height:30px; }
+#footer div.left p.adress{ font-size: 14px; line-height: 1.4;margin-top: 28px;}
+#footer div.left p.tel {font-size: 13px; font-size: 16px; margin-top: 15px;}
+#footer div.right {position: relative; margin-top: 90px; padding: 0px 120px;   }
+
+#footer div.right > ul  {position: relative; transform: translate(26%, 0%); margin-right: 10px; width:100%;right: 0; }
+#footer div.right ul a.title{ font-size: 15px; font-weight:700; color: #ffffff;}
+#footer div.right > ul > li  {float: left; left: 50%; text-align: center; font-size: 14px;}
+#footer div.right > ul > li ul > li > a {opacity: 0.4;}
+#footer div.right > ul > li ul > li > a:hover {opacity: 1; color: #d61818;}
+
+#footer div.right ul >li > ul > li {margin: 20px; font-size: 14px;} 
+
+
+.regulation-link { margin-right: 30px; font-size: 14px; bottom: 0;  background: #272727; }
+.regulation-link p.link {float: left; margin-right: 90px;}
+.regulation-link p.link a {margin-right: 20px;}
+.regulation-link p.link a+a::before {content: ''; width: 1px; height: 10px; left: calc(50% - 23px); top: 44%; background: #ffffff; position: absolute;} 
+.regulation-link p {position: absolute; padding: 0 200px; bottom: 50px; }
+.regulation-link p.txt { right: 0;}
+ 
+
+
+  @keyframes top {
+    0%   {top: 100%;}
+    50%  {top: 2%;}
+    100% {top: 0%;}
+} 
+
+@keyframes scale {
+    0% {transform:scale(1);}
+	100%{transform:scale(1.1);} 
+}
+
+@keyframes opacity {
+    0% {opacity: 0.1;}
+	100%{opacity: 1;} 
+}
+
+@keyframes ani  {
+0%{transform: translateY(100%);}
+100%{transform: translateY(0%);}
+}
+
+@keyframes left  {
+    0%{transform: translate(100%, -100%);}
+    100%{transform: translate(0%);}
+    }
+    @keyframes test  {
+        0%{transform: translateX(100%);}
+        100%{transform: translateX(0%);}
+        }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+@keyframes scale2 {
+    0%{transition:scale(1);}
+    100%{transition:scale(2); opacity: 0;}
+}
+@keyframes point {
+    0%{transition:scale(1); opacity: 0.5;}
+    50%{transition:scale(2); opacity: 0.3;}
+    100%{transition:scale(4.5); opacity: 0;}
+}
+
+
+@keyframes scroll {
+    0%{top: 0;}
+    60%{top: 100%;}
+    100%{top:100%}
+}
+
+/*  화살표 버튼 */
+
+
+.m-arrow{position: absolute; top: 20%; left: calc(50% + 50px);  width: 55px;height: 55px; border-radius: 50px; background: #ffffff; transition: all 0.3s; z-index: 35; cursor: pointer;}
+.m-arrow::before {content: ''; position: absolute;width: 50px;height: 50px;  left :-100%; opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+.m-arrow:hover::before {content: ''; position: absolute;width: 50px;height: 50px;  left :0%; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+/* .arrow:hover::before {content: ''; position: absolute;width: 50px;height: 50px;  left :0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat;} */
+.m-arrow::after {content: ''; position: absolute;width: 50px;height: 50px;  left: 0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat; }
+.m-arrow:hover::after {content: ''; position: absolute; width: 50px;height: 50px;  left: 100%; opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}  
+
+.hidden {visibility: hidden;}
+
+
+
+
+
+.red{position: absolute; top: -60%; left:  calc(50% + 66px);  width: 55px;height: 55px; border-radius: 50px; background: transparent; border: 1px solid #d61818; transition: all 0.3s; cursor: pointer;}
+
+.red::before {content: ''; position: absolute;width: 50px;height: 50px; left :-100%; opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+.red::after {content: ''; position: absolute;width: 50px;height: 50px;  left: 0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+.red:hover {background-color: #ffffff; border-color: #f1f1f1;}
+.red:hover::before {content: ''; position: absolute;width: 50px;height: 50px;  left :0; opacity: 1;  background: url(../image/img_arrow.png) center center no-repeat; }
+.red:hover::after {content: ''; position: absolute;width: 50px;height: 50px;  left: 100%;  opacity: 0;  background: url(../image/img_arrow.png) center center no-repeat; transition: all 0.3s;}
+
+
+
+/*fix*/
+
+.fixinner {position: fixed;}
+.zoom{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+ 
+  }
